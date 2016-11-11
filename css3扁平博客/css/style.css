@@ -1,0 +1,235 @@
+/* 清除内外边距 */
+body, h1, h2, h3, h4, h5, h6, hr, p, blockquote, /* structural elements 结构元素 */
+dl, dt, dd, ul, ol, li, /* list elements 列表元素 */
+pre, /* text formatting elements 文本格式元素 */
+fieldset, lengend, button, input, textarea, /* form elements 表单元素 */
+th, td { /* table elements 表格元素 */
+    margin: 0;
+    padding: 0;
+}
+
+/* 设置默认字体 */
+body,
+button, input, select, textarea { /* for ie */
+    /*font: 12px/1 Tahoma, Helvetica, Arial, "宋体", sans-serif;*/
+    font: 12px/1 Tahoma, Helvetica, Arial, "\5b8b\4f53", sans-serif; /* 用 ascii 字符表示，使得在任何编码下都无问题 */
+}
+
+h1 { font-size: 18px; /* 18px / 12px = 1.5 */ }
+h2 { font-size: 16px; }
+h3 { font-size: 24px; }
+h4, h5, h6 { font-size: 100%; }
+
+address, cite, dfn, em, var { font-style: normal; } /* 将斜体扶正 */
+code, kbd, pre, samp, tt { font-family: "Courier New", Courier, monospace; } /* 统一等宽字体 */
+small { font-size: 12px; } /* 小于 12px 的中文很难阅读，让 small 正常化 */
+
+/* 重置列表元素 */
+ul, ol { list-style: none; }
+
+/* 重置文本格式元素 */
+a { text-decoration: none; }
+a:hover { text-decoration: underline; }
+
+abbr[title], acronym[title] { /* 注：1.ie6 不支持 abbr; 2.这里用了属性选择符，ie6 下无效果 */
+    border-bottom: 1px dotted;
+    cursor: help;
+}
+
+q:before, q:after { content: ''; }
+
+/* 重置表单元素 */
+legend { color: #000; } /* for ie6 */
+fieldset, img { border: none; } /* img 搭车：让链接里的 img 无边框 */
+/* 注：optgroup 无法扶正 */
+button, input, select, textarea {
+    font-size: 100%; /* 使得表单元素在 ie 下能继承字体大小 */
+}
+
+/* 重置表格元素 */
+table {
+    border-collapse: collapse;
+    border-spacing: 0;
+}
+
+/* 重置 hr */
+hr {
+    border: none;
+    height: 1px;
+}
+/* 让非ie浏览器默认也显示垂直滚动条，防止因滚动条引起的闪烁 */
+html { overflow-y: scroll; }
+/*自定义样式*/
+nav{height: 50px;
+background-color: #ccc;
+padding: 0 10px;
+background: transparent;/*设置背景透明*/
+background: rgba(0,0,0,0.4);
+}
+nav .logo{float: left;}
+nav ul{float: right;}
+nav ul li, nav .logo{
+display: inline-block;
+margin-right: 20px;
+line-height: 50px;}
+nav ul li a{
+	line-height: inherit;/*继承上级的样式*/
+	display: inline-block;
+	height: inherit;
+	color: #fff;}
+.clearfix:after{
+	content: '';
+	display: block;
+	clear: both;
+}
+/*header{background: rgba(0,0,0,0.4);}*/
+#banner{height: 520px;
+background-color: aquamarine;
+background: rgba(0,0,0,0.4);
+}
+#banner .inner{max-width: 300px;
+text-align: center;
+margin: -10px auto;
+position: relative;
+top: 160px;
+color: #FFFFFF;}
+.addmargin{line-height: 30px;}
+.inner span{display: block;
+background: #333;
+color: #eee;
+padding: 10px;
+width: 60px;
+height: 20px;
+line-height: 20px;
+border-radius: 10px;
+margin: 20px auto;
+}
+#banner .inner .more{
+margin-top: 200px;
+}
+/**/
+.wrapper{
+	max-width: 1080px;
+	margin: 0 auto;
+	padding: 100px 0;
+}
+.green-section{text-align: center;
+background-color: #089d80;
+color: #FFFFFF;}
+.subhead{
+	font-size: 18px;
+	margin: 10px 0;
+}
+.hr{
+	width: 30%;
+background: red;
+margin: 10px auto;
+border: 1px solid;
+}
+.green-section .group .icon-group{
+	display: inline-block;
+	width: 80px;
+	height: 80px;
+	border:1px solid #000000;
+	transform: rotate(45deg);
+	-webkit-transform: rotate(45deg);
+	-moz-transform: rotate(45deg);
+	margin: 20px;
+	color: #FFFFFF;
+}
+.group{margin-top: 60px;}
+.gray-section{
+	background-color: #CCCCCC;
+	color: #FFFFFF;
+}
+.gray-section .img-section{width:45% ;}
+.img-section img{width: 100%;}
+.gray-section .text-section{width: 55%;}
+.article-preview >div{float: left;
+font-size: 0px;}/*重置字体，避免div之间出现缝隙*/
+
+.article-preview:after{
+	content: '';
+	display: block;
+	clear: both;
+}
+.text-section{position: relative;
+    left: 50px;
+    top: 68px;
+    line-height: 30px;}
+.text-section p{font-size: 18px;
+letter-spacing: 1px;}
+.text-section > *{
+	max-width: 90%;
+}
+.article-preview:nth-child(odd){
+	background-color: rgba(255,255,255,0.5);
+}
+.purple-section{
+	background-color: #089D80;
+	color: #FFFFFF;
+}
+.purple-section .head-wrapper{
+	text-align: center;
+}
+.card{width: 50%;
+padding: 50px;
+float: left;
+/*border: 1px solid #FFFFFF;*/
+box-sizing: border-box;
+-webkit-box-sizing: border-box;/*继承浮动*/
+}
+.card p{
+	font-size: 14px;
+	letter-spacing: 1px;
+	margin-top: 10px;
+}
+.card:first-child{
+	background-color: rgba(0,0,0,0.05);
+}
+.card:nth-child(1){
+	background-color: rgba(0,0,0,0.09);
+}
+.card:nth-child(2){
+	background-color: rgba(0,0,0,0.13);
+}
+.mainwapper{
+	background: #444 url(../img/banner.jpg) no-repeat center;
+	background-attachment: fixed;/*使图片固定不动*/
+	background-size: cover;/*把背景图像扩展至足够大，以使背景图像完全覆盖背景区域。*/
+	overflow: hidden;
+}
+.mask{position: fixed;
+width:100%;
+height: 100%;
+top: 0;
+left: 0;
+background: rgba(0,0,0,0.3);
+z-index: 10;
+display: none;
+}
+.sidebar{width: 300px;
+background: #333333;
+position: fixed;
+top: 0;
+bottom: 0;
+right: -300px;
+padding: 20px 0;
+z-index: 100;
+transition:right 0.5s;
+}
+.sidebar ul li a{display: inline-block;
+width: 100%;
+padding: 10px 30px;
+text-decoration: none;
+color: #FFFFFF;}
+.btn{width: 60px;
+height: 30px;
+line-height: 30px;
+border: 0px;
+background-color: #7FFFD4;
+position: fixed;
+bottom: 0;
+right: 0;
+/*display: block;*/}
+

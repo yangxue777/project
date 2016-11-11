@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<title>css3扁平博客</title>
+		<link href="css/style.css" rel="stylesheet" />
+	</head>
+	<body>
+		<!--头部开始-->
+		<div class="mainwapper">			
+		<header>
+			<nav>
+				<div class="logo"><a href="index.html">logo</a></div>
+				<ul>
+					<li><a href="#">首页</a></li>
+					<li><a href="#">产品中心</a></li>
+					<li><a href="#">联系我们</a></li>
+					<li><a href="#">扩展阅读</a></li>
+					<li><a href="#">资讯推荐</a></li>
+					<li id="sidebar_trigger"><a href="#">侧边导航</a></li>
+				</ul>
+			</nav>
+			<div id="banner">
+				<div class="inner">
+					<div class="hr"></div>
+					<h1>张晓窝</h1>
+					<div class="hr"></div>
+					<p class="addmargin">dsssfsfgdfgfddfhddhfgjhgkgkjfsretreyt</p>
+					<span>了解更多</span>
+					<div class="more">
+						更多
+					</div>
+				</div>
+			</div>
+		</header>
+		
+		<!--头部结束-->
+		<!--主体内容开始-->
+		<div class="content">
+			<section class="green-section">
+				<div class="wrapper">
+					<div class="">	
+						<h2>标题一</h2>
+						<div class="hr"></div>
+						<p class="subhead">啊是双方共同犯得上广泛大锅饭的</p>
+					</div>
+					<div class="group">
+						<span class="icon-group">item</span>
+						<span class="icon-group">item</span>
+						<span class="icon-group">item</span>
+					</div>
+				</div>
+			</section>
+			<section class="gray-section">				
+					<div class="article-preview">						
+						<div class="text-section">
+							<h3>我是标题</h3>
+							<p>啊是发发发阿萨师反倒是fewfew我是的方式few热舞sadFGdsgdsyhfgjghkjh发生的提高认识的一个体育让他</p>
+						</div>
+						<div class="img-section">
+							<img src="img/pic01.jpg" />
+						</div>
+					</div>				
+								
+					<div class="article-preview">
+						<div class="img-section">
+							<img src="img/pic01.jpg" />
+						</div>
+						<div class="text-section">
+							<h3>我是标题</h3>
+							<p>啊是发发发阿萨师反倒是fewfew我是的方式few热舞</p>
+						</div>
+					</div>				
+									
+					<div class="article-preview">						
+						<div class="text-section">
+							<h3>我是标题</h3>
+							<p>啊是发发发阿萨师反倒是fewfew我是的方式few热舞sadFGdsgdsyhfgjghkjh发生的提高认识的一个体育让他</p>
+						</div>
+						<div class="img-section">
+							<img src="img/pic01.jpg" />
+						</div>
+					</div>							
+			</section>
+			<!--part three start-->
+			<div class="purple-section">
+				<div class="wrapper">
+					<div id="" class="head-wrapper">
+					<h2>又是一个标题</h2>
+					<div class="hr"></div>
+					<div class="sub-heading">hgjhgkjhluertwertyrtutyiyuolturdgfrgjhnkugyikyuiythsdfgvbdgc</div>
+					</div>
+					<br style="clear: both;" />
+					<div class="card-group clearfix">
+						<div class="card ">
+							<h3>标题三</h3>
+							<p>asrfatfgsfdytryhtrsrgsertgrewtgrehtedhetyhethytey
+							grsgtresyeryheryhteyhtgrhrtghrt
+							grtgeyhrtujhryujyt</p>
+						</div>
+						<div class="card ">
+							<h3>标题三</h3>
+							<p>asrfatfgsfdytryhtrsrgsertgrewtgrehtedhetyhethytey
+							grsgtresyeryheryhteyhtgrhrtghrt
+							grtgeyhrtujhryujyt</p>
+						</div>
+					</div>
+			    </div>			
+			</div>				
+			<!--part three end-->
+		</div>
+		<!--主体内容结束-->
+		<!--footer START-->
+		<footer>
+			
+		</footer>		
+		<!--footer END-->
+		<div class="mask"></div>
+		<div class="sidebar">
+			<ul>
+				<li><a href="#">item1</a></li>
+				<li><a href="#">item2</a></li>
+				<li><a href="#">item3</a></li>
+				<li><a href="#">item4</a></li>
+				<li><a href="#">item5</a></li>			
+			</ul>
+		</div>
+		<button class="btn">返回顶部</button>
+		</div>
+		  <script src="http://www.imooc.com/data/jquery-1.8.2.min.js" type="text/javascript"></script>
+		  <script>
+		  	$(function(){
+		  		var sideBar=$(".sidebar");
+		  		var mask=$(".mask");
+		  		var trigger=$("#sidebar_trigger");
+		  		var list=$(".sidebar ul li");
+		  		trigger.on("click",function(){
+		  			mask.fadeIn();
+		  			sideBar.animate({right:"0"});
+		  			
+		  		});
+		  		
+		  		//mask消失
+		  		list.on("click",function(){
+		  			mask.fadeOut();
+		  			sideBar.animate({right:"-300px"});
+		  		});
+		  		
+		  		//返回顶部
+		  		var btn=$(".btn");
+		  		btn.on("click",function(){
+		  			$("html,body").animate({scrollTop:"0"},600);
+		  		});
+		  		
+		  		//监听window的滚动事件
+		  		$(window).on("scroll",function(){
+		  			if ($(window).scrollTop()>$(window).height()) {//当滚动条高度大于窗口高度，显示btn;
+		  				btn.fadeIn();
+		  			} else{
+		  				btn.fadeOut();
+		  			}
+		  		});
+		  		$(window).trigger("scroll");//滚动时自动触发事件
+		  	});
+		  </script>
+	</body>
+</html>
